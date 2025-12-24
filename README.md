@@ -10,6 +10,12 @@ A scalable machine learning classification system designed to **predict business
 
 The backend is architected using **FastAPI** with asynchronous request handling, achieving a **25% reduction in latency** compared to traditional synchronous frameworks. It includes an automated **Exploratory Data Analysis (EDA)** module and optimized **SQL** storage for prediction logging.
 
+## 📸 Project Demo
+
+Here is the API in action using Swagger UI:
+
+![Swagger UI Demo](screenshots/swagger_demo.png)
+
 ### 🚀 Key Features
 * **Scalable Prediction Engine:** Uses a Random Forest Classifier (Scikit-learn) to predict customer retention with high accuracy.
 * **High-Performance API:** Built with **FastAPI** using `async/await` to handle concurrent inference requests efficiently.
@@ -92,14 +98,16 @@ Visit http://127.0.0.1:8000/docs to interact with the API.
   "db_status": "Logged successfully"
 }
 ```
-## 📸 Project Demo
 
-Here is the API in action using Swagger UI:
 
-![Swagger UI Demo](screenshots/swagger_demo.png)
+## Sample Input & Output
 
-### Sample Input & Output
+### 📥 Input
+
 ![Input](screenshots/input_1.png)
+
+### 📤 Output
+
 ![Output](screenshots/output_1.png)
 
 ## 📊 Automated EDA
