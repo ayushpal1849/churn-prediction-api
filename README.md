@@ -10,11 +10,46 @@ A scalable machine learning classification system designed to **predict business
 
 The backend is architected using **FastAPI** with asynchronous request handling, achieving a **25% reduction in latency** compared to traditional synchronous frameworks. It includes an automated **Exploratory Data Analysis (EDA)** module and optimized **SQL** storage for prediction logging.
 
+## 🏗️ System Architecture
+This diagram illustrates the data flow from the user upload to the final JSON response.
+
+graph TD
+    User[Client / Frontend] -->|POST /predict| API(FastAPI Server)
+    User -->|POST /generate-eda| API
+    
+    subgraph "Backend System (Docker)"
+    API -->|Features| Model[ML Model<br/>Scikit-Learn]
+    Model -->|Prediction| API
+    
+    API -->|Log Result| DB[(SQL Database<br/>SQLAlchemy)]
+    
+    API -->|Batch Data| EDA[EDA Module<br/>Matplotlib/Pandas]
+    EDA -->|Generate Graph| Static[Static Folder]
+    end
+    
+    API -->|JSON Response| User
+    
+    style API fill:#009688,stroke:#333,stroke-width:2px,color:white
+    style Model fill:#2196F3,stroke:#333,stroke-width:2px,color:white
+    style DB fill:#FFC107,stroke:#333,stroke-width:2px,color:black
+
 ## 📸 Project Demo
 
 Here is the API in action using Swagger UI:
 
 ![Swagger UI Demo](screenshots/swagger_demo.png)
+
+## 📊 Sample Outputs
+
+### 1. Automated EDA Report
+The system automatically generates graphs to analyze customer data distribution:
+
+![EDA Graph](screenshots/eda_report.png)
+
+### 2. API Prediction Result
+![Prediction Response](screenshots/output_1.png)
+
+---
 
 ### 🚀 Key Features
 * **Scalable Prediction Engine:** Uses a Random Forest Classifier (Scikit-learn) to predict customer retention with high accuracy.
@@ -99,24 +134,8 @@ Visit http://127.0.0.1:8000/docs to interact with the API.
 }
 ```
 
-
-## Sample Input & Output
-
-### 📥 Input
-
-![Input](screenshots/input_1.png)
-
-### 📤 Output
-
-![Output](screenshots/output_1.png)
-
 ## 📊 Automated EDA
 The system includes an endpoint /generate-eda that takes current batch data and uses Matplotlib to generate trend visualizations, automating the feature engineering analysis process.
-
-### 📊 Automated EDA Output
-The API automatically generates feature distribution graphs for analysis:
-
-![EDA Graph Sample](screenshots/eda_report.png)
 
 ## 📬 Contact
 **Ayush Pal**
