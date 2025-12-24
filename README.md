@@ -13,6 +13,7 @@ The backend is architected using **FastAPI** with asynchronous request handling,
 ## 🏗️ System Architecture
 This diagram illustrates the data flow from the user upload to the final JSON response.
 
+```mermaid
 graph TD
     User[Client / Frontend] -->|POST /predict| API(FastAPI Server)
     User -->|POST /generate-eda| API
@@ -32,6 +33,7 @@ graph TD
     style API fill:#009688,stroke:#333,stroke-width:2px,color:white
     style Model fill:#2196F3,stroke:#333,stroke-width:2px,color:white
     style DB fill:#FFC107,stroke:#333,stroke-width:2px,color:black
+```
 
 ## 📸 Project Demo
 
