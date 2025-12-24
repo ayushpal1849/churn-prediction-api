@@ -107,7 +107,7 @@ The system includes an endpoint /generate-eda that takes current batch data and 
 ### 📊 Automated EDA Output
 The API automatically generates feature distribution graphs for analysis:
 
-![EDA Graph Sample](screenshots/eda_sample.png)
+![EDA Graph Sample](screenshots/eda_report.png)
 
 ## 📬 Contact
 **Ayush Pal**
