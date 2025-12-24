@@ -98,8 +98,9 @@ Here is the API in action using Swagger UI:
 
 ![Swagger UI Demo](screenshots/swagger_demo.png)
 
-### Sample Output
-![Input vs Output](https://user-images.githubusercontent.com/your-uploaded-link.png)
+### Sample Input & Output
+![Input](screenshots/input_1.png)
+![Output](screenshots/output_1.png)
 
 ## 📊 Automated EDA
 The system includes an endpoint /generate-eda that takes current batch data and uses Matplotlib to generate trend visualizations, automating the feature engineering analysis process.
@@ -107,7 +108,7 @@ The system includes an endpoint /generate-eda that takes current batch data and 
 ### 📊 Automated EDA Output
 The API automatically generates feature distribution graphs for analysis:
 
-![EDA Graph Sample](screenshots/eda_sample.png)
+![EDA Graph Sample](screenshots/eda_report.png)
 
 ## 📬 Contact
 **Ayush Pal**
