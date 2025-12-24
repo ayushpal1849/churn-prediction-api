@@ -98,8 +98,9 @@ Here is the API in action using Swagger UI:
 
 ![Swagger UI Demo](screenshots/swagger_demo.png)
 
-### Sample Output
-![Input vs Output](https://user-images.githubusercontent.com/your-uploaded-link.png)
+### Sample Input & Output
+![Input](screenshots/input_1.png)
+![Output](screenshots/output_1.png)
 
 ## 📊 Automated EDA
 The system includes an endpoint /generate-eda that takes current batch data and uses Matplotlib to generate trend visualizations, automating the feature engineering analysis process.
