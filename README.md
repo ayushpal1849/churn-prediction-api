@@ -88,7 +88,7 @@ churn-prediction-api/
 ### 1. Local Setup
 ```bash
 # Clone repository
-git clone [https://github.com/ayushpal1849/churn-prediction-api.git](https://github.com/ayushpal1849/churn-prediction-api.git)
+git clone https://github.com/ayushpal1849/churn-prediction-api.git
 cd churn-prediction-api
 
 # Install dependencies
